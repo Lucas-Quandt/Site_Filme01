@@ -12,6 +12,8 @@ body {
   
 }
 
+/*============================Cabeçalho============================*/
+
 header {
   background-color: rgba(0, 0, 0, 0.897); /* Fundo preto com transparência */
   text-align: center; /* Centraliza o texto */
@@ -22,7 +24,7 @@ header {
   width: 100%;
 }
 
-
+/*============================Pôster============================*/
 .Poster img {
   width: 500px; /* Define a largura da foto */
   height: 700px; /* Define a altura da foto */  
@@ -33,6 +35,7 @@ header {
   
 }
 
+/*============================Parte do site aonde tem a Sinopse============================*/
 .TextoSinopse {
   margin-bottom: 7rem; /* Espaço entre parágrafos */
   line-height: 1.6; /* Altura das linhas para melhor leitura */
@@ -47,7 +50,7 @@ header {
   align-items: center;     /* Centraliza verticalmente */
   min-height: 20vh;  
   background-color: rgba(255, 255, 255, 0.651); /* Fundo branco para o quadro */
-  margin-top: 40px;
+  margin-top: 5px;
   border: 5px solid #000000; /* Adiciona uma borda sutil ao redor da foto (opcional) */
   border-radius: 5%;
 
@@ -65,6 +68,13 @@ header {
   color: #000000;
 }
 
+.Subtitulo01 h1 {
+  color: #000000;
+  margin-top: 40px
+
+}
+
+/*============================Parte do site aonde tem as fotos e instagram dos atores============================*/
 .Atores  {
   margin-bottom: 7rem; /* Espaço entre parágrafos */
   line-height: 1.6; /* Altura das linhas para melhor leitura */
@@ -79,7 +89,7 @@ header {
   align-items: center;     /* Centraliza verticalmente */
   min-height: 20vh;  
   background-color: rgba(255, 255, 255, 0.651); /* Fundo branco para o quadro */
-  margin-top: 40px;
+  margin-top: 5px;
   border: 5px solid #000000; /* Adiciona uma borda sutil ao redor da foto (opcional) */
   border-radius: 5%;
 
@@ -94,7 +104,126 @@ header {
   text-align: justify;
 
   line-height: 1.6; /* Aumenta o espaçamento entre as linhas para facilitar a leitura */
-  color: #000000;
-
+  color: #000000;   
+  
+  position: relative; /* Necessário para posicionar a linha vertical corretamente */
+  max-width: 800px;   /* Largura máxima da lista */
+  margin: 0 auto;     /* Centraliza o container na página */
 }
+
+.Atores li {
+  flex: 0 0 45%;                 /* Ocupa aproximadamente 45% da largura (2 por linha) */
+  display: flex;                /* Flex interno para organizar conteúdo verticalmente */
+  flex-direction: column;      
+  align-items: center;         /* Centraliza texto, imagem e botão */
+  padding: 15px;
+  box-sizing: border-box;      /* Garante que padding não estoure os 45% */
+  margin-bottom: 20px;         /* Espaço entre linhas */
+  position: relative;
+    
+}
+
+.Atores ul {
+  list-style: none;        /* Remove os marcadores padrão da lista */
+  display: flex;           /* Ativa flexbox */
+  flex-wrap: wrap;         /* Permite que os itens quebrem para próxima linha */
+  padding: 0;
+  margin: 0;
+  justify-content: center; /* Centraliza os itens */
+  min-height: 400px;       /* Garante altura suficiente para que a linha apareça */
+  position: relative;      /* Importante para a linha estar dentro deste contexto */
+    
+    
+}
+
+.Atores::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background-color: #ccc;
+    z-index: 1;
+}
+
+
+/*============================Parte do site aonde tem o trailer do filme ============================*/
+
+.TumbTrailer img {
+  border-radius: 20px;
+  width: 700px; /* Define a largura da foto */
+  height: 400px; /* Define a altura da foto */
+  border: 5px solid #000000;
+  margin-top: 5px
+}
+
+/*============================Parte do site aonde tem as fotos do making of============================*/
+ .galeria {
+  
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+  
+}
+
+.slides img {
+  display: none;        /* Esconde todas as imagens por padrão */
+  width: 100%;
+  border-radius: 8px;
+  width: 900px; /* Define a largura da foto */
+  height: 600px; /* Define a altura da foto */
+  margin-top: 5px;
+  border: 5px solid #000000; /* Adiciona uma borda sutil ao redor da foto (opcional) */
+  border-radius: 5%;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+/* Exibir a imagem certa quando o input correspondente estiver checked */
+#foto1:checked ~ .slides .img1 {
+  display: block;
+}
+
+#foto2:checked ~ .slides .img2 {
+  display: block;
+}
+
+#foto3:checked ~ .slides .img3 {
+  display: block;
+}
+
+#foto4:checked ~ .slides .img4 {
+  display: block;
+}
+
+#foto5:checked ~ .slides .img5 {
+  display: block;
+}
+
+#foto6:checked ~ .slides .img6 {
+  display: block;
+}
+
+.botoes {
+  margin-top: 10px;
+}
+
+.botoes label {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 8px 12px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 40px;
+}
+
+
+       
+
+
 
